@@ -1,0 +1,10 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: radial-gradient(1200px 800px at 20% -10%, #13203a 0%, #0b0f17 60%),
+              radial-gradient(1000px 800px at 110% -20%, #182a4f 0%, #0b0f17 60%);
+  color: white;
+}
