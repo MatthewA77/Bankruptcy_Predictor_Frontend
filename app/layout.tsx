@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark overflow-x-hidden">
       <body className={`${inter.className} bg-[#0b0f17] text-white min-h-screen flex flex-col`}>
         <Navbar />
         <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-6">{children}</main>
