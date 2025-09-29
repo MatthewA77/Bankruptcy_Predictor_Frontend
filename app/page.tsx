@@ -11,10 +11,15 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="flex-1 flex flex-col justify-center items-center text-center px-4">
-        <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-          COBA-ION — Company Bankruptcy Prediction
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent text-center">
+          COBA-ION
         </h1>
-        <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
+
+        <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent text-center">
+          Company Bankruptcy Prediction
+        </h2>
+
+        <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto text-center">
           Estimate bankruptcy probability from financial ratios and see the factors that drive the prediction — powered by explainable AI.
         </p>
         <div className="mt-8">
