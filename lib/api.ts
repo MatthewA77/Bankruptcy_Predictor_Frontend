@@ -28,9 +28,16 @@ export type PredictResponse = {
   news?: NewsItem[];
 };
 
+export type ExplainItem = {
+  feature: string;
+  value: number;   // shap value (signed)
+  abs: number;     // |value|
+  direction: "increase" | "decrease";
+};
+
 export type ExplainResponse = {
-  positive: [string, number][];
-  negative: [string, number][];
+  positive: ExplainItem[];
+  negative: ExplainItem[];
 };
 
 // --- ensureBase helper ---
