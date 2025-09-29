@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface CompanyDetailsProps {
   details: {
     name?: string;
@@ -9,8 +11,34 @@ interface CompanyDetailsProps {
     website?: string;
     ceo?: string;
     summary?: string;
+    marketCap?: string;
+    currency?: string;
   };
 }
+
+function SummaryToggle({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const limit = 250; // number of characters before cutting off
+
+  if (text.length <= limit) {
+    return <p className="mt-1 leading-relaxed text-justify">{text}</p>;
+  }
+
+  return (
+    <div>
+      <p className="mt-1 leading-relaxed text-justify">
+        {expanded ? text : text.slice(0, limit) + "..."}
+      </p>
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="mt-2 text-emerald-400 hover:underline text-sm"
+      >
+        {expanded ? "Read less" : "Read more"}
+      </button>
+    </div>
+  );
+}
+
 
 export default function CompanyDetails({ details }: CompanyDetailsProps) {
   return (
@@ -59,13 +87,18 @@ export default function CompanyDetails({ details }: CompanyDetailsProps) {
           </div>
         )}
 
+        {details?.marketCap && (
+          <div>
+            <h3 className="text-sm uppercase text-gray-400">market cap</h3>
+            <p className="font-medium">{details.marketCap}</p>
+          </div>
+        )}
+
         {/* Summary spans 2 columns */}
         {details?.summary && (
           <div className="md:col-span-2">
             <h3 className="text-sm uppercase text-gray-400">summary</h3>
-            <p className="mt-1 leading-relaxed text-justify">
-              {details.summary}
-            </p>
+            <SummaryToggle text={details.summary} />
           </div>
         )}
       </div>
