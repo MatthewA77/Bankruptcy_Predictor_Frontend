@@ -1,10 +1,6 @@
 # Bankruptcy Predictor – Frontend
 
-## 🚀 How to Use
-
-1. **Enter a Ticker Symbol:**  
-
-The frontend communicates with a **FastAPI backend** (deployed separately, e.g., on Hugging Face Spaces) which handles data processing, financial data retrieval, and machine learning predictions.  
+The frontend communicates with a **FastAPI backend** (deployed separately on Hugging Face Spaces) which handles data processing, financial data retrieval, and machine learning predictions.  
 
 ### Key Features
 - 🔍 Search companies by ticker symbol  
