@@ -11,7 +11,7 @@ The frontend communicates with a **FastAPI backend** (deployed separately on Hug
 
 ---
 
-## 🚀 How to Use
+## How to Use
 
 1. **Enter a Ticker Symbol:**  
     Use the search bar to input a company's ticker symbol (e.g., AAPL, TSLA).
